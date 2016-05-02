@@ -9,5 +9,6 @@
     <string name="network_notavailable">Network is unavailable!</string>
     <string name="time_label_text">At %s it will be</string>
     <string name="precip_value_text">%d %%</string>
+    <string name="no_dialy_forecast_data">There is no data to display.</string>
 
 </resources>

@@ -1,8 +1,10 @@
-package de.flowment.stormy;
+package de.flowment.stormy.weather;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
+
+import de.flowment.stormy.R;
 
 /**
  * Created by
@@ -11,7 +13,7 @@ import java.util.TimeZone;
  * <p/>
  * This class describes the data model needed for our representation of the weather.
  */
-public class CurrentWeather {
+public class Current {
 
     private String mIcon;
     private long mTime;
