@@ -1,6 +1,7 @@
 package de.flowment.stormy.ui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -27,6 +28,7 @@ import java.io.IOException;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import de.flowment.stormy.R;
 import de.flowment.stormy.weather.Current;
 import de.flowment.stormy.weather.Day;
@@ -81,7 +83,6 @@ public class MainActivity extends AppCompatActivity {
 
         Log.d(TAG, "Main UI code is running!");
         Log.d(TAG, new Day((long) longitude, "lol", 20, "bestIcon", "berlin").toString());
-
     }
 
     private void getForecast(double latitude, double longitude) {
@@ -255,4 +256,9 @@ public class MainActivity extends AppCompatActivity {
         dialog.show(getFragmentManager(), "error_dialog");
     }
 
+    @OnClick(R.id.dailyButton)
+    public void startDailyActivity(View view) {
+        Intent intent = new Intent(this, DailyForecastActivity.class);
+        startActivity(intent);
+    }
 }
